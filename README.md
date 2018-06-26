@@ -35,3 +35,34 @@ at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java
 at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
 at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
 at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+
+
+
+1.pom.xml中增
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml</groupId>
+			<artifactId>classmate</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+2.实例化bean
+<bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"/>
+
+//@Api(value="Hello World", description="Hello World Controller")
+
+3.http://localhost:8007/swagger-ui.html
+http://localhost:8007/v2/api-docs

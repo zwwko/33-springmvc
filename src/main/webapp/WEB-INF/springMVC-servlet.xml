@@ -59,4 +59,7 @@
     <!--</property>-->
     <!--</bean>-->
 
+
+    <bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"/>
+
 </beans>
